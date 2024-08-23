@@ -1,0 +1,42 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--dark-blue-300);
+}
+
+.input-txt{
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+}
+
+.output-txt{
+    font-size: 1.5rem;
+    color: var(--gray-400);
+}
+
+.empty-output-txt{
+    font-size: 1rem;
+    color: var(--gray-400);
+}
+
+.empty-output-title{
+    font-size: 1.5rem;
+    color: var(--gray-500);
+    font-weight: 700;
+}
+
+.btn-white{
+    font-size: 1rem;
+    color: var(--dark-blue-300);
+}
+
+.btn-blue{
+    font-size: 1rem;
+    color: white;
+}
+
+.info-txt{
+    font-size: 0.75rem;
+    color: var(--gray-400);
+}
