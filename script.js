@@ -1,0 +1,113 @@
+function encode() {
+    var input = getInput();
+    var output = encoded(input);
+
+    var encodedOutput = document.getElementsByClassName("output-result");
+    var empty = document.getElementsByClassName("empty-output");
+    encodedOutput[0].innerHTML = output;
+    empty[0].innerHTML = "";
+}
+
+function decode() {
+    var input = getInput();
+    var output = decoded(input);
+
+    var decodedOutput = document.getElementsByClassName("output-result");
+    var empty = document.getElementsByClassName("empty-output");
+    decodedOutput[0].innerHTML = output;
+    empty[0].innerHTML = "";
+}
+
+function getInput() {
+    var input = document.getElementById("input").value;
+    return input;
+}
+
+function encoded(text){
+    var keys = {
+        'a': 'ai',
+        'e': 'enter',
+        'i': 'imes',
+        'o': 'ober',
+        'u': 'ufat',
+    }
+    var encodedText = '';
+    for (var i = 0; i < text.length; i++){
+        if (text[i] in keys){
+            encodedText += keys[text[i]];
+        } else {
+            encodedText += text[i];
+        }
+    }
+
+    return encodedText;
+}
+
+function decoded(text){
+    var subA, subE, subI, subO, subU;
+
+    subA = subE = subI = subO = subU = '';
+    
+    for (var i = 0; i < text.length; i++){
+        var result = trackDecode(text[i], text, subA, 'ai', 'a');
+        subA = result['subText'];
+        if (text != result['text']){
+            subA = subE = subI = subO = subU = '';
+            text = result['text'];
+        }
+        
+        result = trackDecode(text[i], text, subE, 'enter', 'e');
+        subE = result['subText'];
+        if (text != result['text']){
+            subA = subE = subI = subO = subU = '';
+            text = result['text'];
+            i -= 3;
+        }
+        
+        result = trackDecode(text[i], text, subI, 'imes', 'i');
+        subI = result['subText'];
+        if (text != result['text']){
+            subA = subE = subI = subO = subU = '';
+            text = result['text'];
+            i -= 2;
+        }
+
+        result = trackDecode(text[i], text, subO, 'ober', 'o');
+        subO = result['subText'];
+        if (text != result['text']){
+            subA = subE = subI = subO = subU = '';
+            text = result['text'];
+            i -= 2;
+        }
+
+        result = trackDecode(text[i], text, subU, 'ufat', 'u');
+        subU = result['subText'];
+        if (text != result['text']){
+            subA = subE = subI = subO = subU = '';
+            text = result['text'];
+            i -= 2;
+        }
+    }
+
+    return text;
+}
+
+function trackDecode(input, text, subText, key, decodedKey){
+    var result = {};
+    result['text'] = text;
+
+    if (key.startsWith(subText + input))
+        subText += input;
+    else
+        subText = '';
+    result['subText'] = subText;
+
+    if (subText == key){
+        text = text.replace(subText, decodedKey);
+        result['text'] = text;
+        result['subText'] = '';
+    }
+
+    return result;
+}
+
