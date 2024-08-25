@@ -3,11 +3,58 @@ body{
     font-weight: 400;
     font-size: 1rem;
     color: var(--dark-blue-300);
+    background-color: var(--light-blue-100);
+}
+
+header{
+    margin: 40px;
+    margin-bottom: 32px;
+}
+
+main{
+    margin: 0 40px;
+}
+
+.info-container{
+    display: flex;
+    gap: 8px;
+}
+
+.info-txt{
+    font-size: 0.75rem;
+    color: var(--gray-400);
+}
+
+.inputs-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 58px;
+    margin-top: 5px;
 }
 
 .input-txt{
     font-size: 2rem;
     color: var(--dark-blue-300);
+    resize: none;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.input-txt::placeholder{
+    color: var(--dark-blue-300);
+}
+
+.output, .input{
+    width: 100%;
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.output{
+    background-color: white;
 }
 
 .output-txt{
@@ -15,7 +62,15 @@ body{
     color: var(--gray-400);
 }
 
+.empty-output{
+    text-align: center;
+}
+
 .empty-output-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: wrap;
     font-size: 1rem;
     color: var(--gray-400);
 }
@@ -26,17 +81,57 @@ body{
     font-weight: 700;
 }
 
-.btn-white{
+.btn-container{
+    padding: 0 32px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+
+button{
+    border-radius: 24px;
+    border-width: 1px;
+    border-style: solid;
     font-size: 1rem;
+    padding: 24px;
+    width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.btn-white{
     color: var(--dark-blue-300);
+    border-color: var(--dark-blue-300);
+    background-color: white;
+}
+
+.btn-white:hover{
+    background-color: var(--light-blue-200);
 }
 
 .btn-blue{
-    font-size: 1rem;
+    background-color: var(--dark-blue-300);
+    border-color: var(--dark-blue-300);
     color: white;
 }
 
-.info-txt{
-    font-size: 0.75rem;
-    color: var(--gray-400);
+.btn-blue:hover{
+    background-color: var(--dark-blue-400);
+    border-color: var(--dark-blue-400);
+}
+
+footer{
+    color: var(--light-blue-500);
+    margin: 24px 0 0 10px;
+    text-align: center;
+}
+
+footer a{
+    color: var(--dark-blue-400);
+}
+
+footer a:hover{
+    color: var(--dark-blue-200);
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <object type="image/svg+xml" data="./assets/icons/aluraHeader.svg"></object>
+    </header>
+    <main>
+        <div class="info-container">
+            <object type="image/svg+xml" data="./assets/icons/infoIcon.svg"></object>
+            <p class="info-txt">Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div class="inputs-container">
+            <section class="input">
+                <textarea class="input-txt" id="output" placeholder="Digite seu texto"></textarea>
+            </section>
+            <section class="output">
+                <div class="empty-output">
+                    <object type="image/svg+xml" data="./assets/imgs/High quality products 1 1.svg"></object>
+                    <div class="empty-output-txt">
+                        <p class="empty-output-title">Nenhuma mensagem encontrada</p>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+                </div>
+                <div class="output-result">
+                </div>
+            </section>
+            <div class="btn-container">
+                <button class="btn-blue" onclick="code()">Codificar</button>
+                <button class="btn-white" onclick="decode()">Decodificador</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a target="_blank" href="https://github.com/everaldina">everaldina</a></p>
+    </footer>
+</body>
+</html>
