@@ -18,5 +18,9 @@
     --gray-300: #868E96;
     --gray-400: #495057;
     --gray-500: #343A40;
+
+    --horizontal-spacing-sm: 20px;
+    --horizontal-spacing: 40px;
+    --horizontal-spacing-lg: 80px;
 }
 

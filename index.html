@@ -18,30 +18,28 @@
             <object type="image/svg+xml" data="./assets/icons/infoIcon.svg" aria-label="Ícone de Informação"></object>
             <p class="info-txt">Apenas letras minúsculas e sem acento.</p>
         </div>
-        <div class="inputs-container">
-            <section class="input">
-                <textarea autofocus class="input-txt" id="input" placeholder="Digite seu texto..."></textarea>
-            </section>
-            <section class="output">
-                <div class="empty-output">
-                    <object type="image/svg+xml" data="./assets/imgs/High quality products 1 1.svg" aria-label="Personagem segurando uma lupa em busca de um diamante."></object>
-                    <div class="empty-output-txt">
-                        <strong class="empty-output-highlight">Nenhuma mensagem encontrada</strong>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                    </div>
+        <section class="input">
+            <textarea autofocus class="input-txt" id="input" placeholder="Digite seu texto..."></textarea>
+        </section>
+        <section class="output">
+            <div class="empty-output">
+                <object type="image/svg+xml" id="empty-img" data="./assets/imgs/High quality products 1 1.svg" aria-label="Personagem segurando uma lupa em busca de um diamante."></object>
+                <div class="empty-output-txt">
+                    <strong class="empty-output-highlight">Nenhuma mensagem encontrada</strong>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
-                <div class="output-result">
-                    <textarea class="output-txt" disabled ="output" id="output"></textarea>
-                    <div class="copy-container" role="button" aria-label="Copiar texto" onclick="copyOutput()">
-                        <p class="copy-txt">Copiar</p>
-                        <object type="image/svg+xml" width="16px" data="./assets/icons/clone-regular-gray-200.svg" aria-label="Ícone de copia de texto"></object>
-                    </div>
-                </div>
-            </section>
-            <div class="btn-container">
-                <button class="btn-blue" onclick="encode()">Codificar</button>
-                <button class="btn-white" onclick="decode()">Decodificador</button>
             </div>
+            <div class="output-result">
+                <textarea class="output-txt" disabled ="output" id="output"></textarea>
+                <div class="copy-container" role="button" aria-label="Copiar texto" onclick="copyOutput()">
+                    <p class="copy-txt">Copiar</p>
+                    <object type="image/svg+xml" width="16px" data="./assets/icons/clone-regular-gray-200.svg" aria-label="Ícone de copia de texto"></object>
+                </div>
+            </div>
+        </section>
+        <div class="btn-container">
+            <button class="btn-blue" onclick="encode()">Codificar</button>
+            <button class="btn-white" onclick="decode()">Decodificador</button>
         </div>
     </main>
     <footer>
