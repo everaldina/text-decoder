@@ -1,21 +1,24 @@
 function encode() {
     var input = getInput();
     var output = encoded(input);
-
-    var encodedOutput = document.getElementsByClassName("output-result");
-    var empty = document.getElementsByClassName("empty-output");
-    encodedOutput[0].innerHTML = output;
-    empty[0].style.display = "none";
+    updateOutput(output);
 }
 
 function decode() {
     var input = getInput();
     var output = decoded(input);
+    updateOutput(output);
+}
 
+
+function updateOutput(text){
     var decodedOutput = document.getElementsByClassName("output-result");
     var empty = document.getElementsByClassName("empty-output");
-    decodedOutput[0].innerHTML = output;
-    empty[0].style.display = "none";
+    var output = document.getElementById("output");
+    empty[0].style.display = "none"; 
+    decodedOutput[0].style.display = "block";
+    decodedOutput[0].style.height = '100%';
+    output.innerHTML = text;
 }
 
 function getInput() {
