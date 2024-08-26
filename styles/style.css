@@ -96,6 +96,22 @@ main{
     display: none;
 }
 
+
+.copy-container{
+    display: flex;
+    gap: 8px;
+}
+
+.copy-container:hover{
+    cursor: pointer;
+    filter: brightness(0.3);
+}
+
+.copy-txt{
+    font-size: 0.75rem;
+    color: var(--gray-200);
+}
+
 .btn-container{
     padding: 0 32px;
     width: 100%;

@@ -22,6 +22,26 @@ function decode() {
     }
 }
 
+function copyOutput() {
+    var output = document.getElementById("output").value;
+    var copy = document.getElementsByClassName("copy-txt")[0];
+    navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+        if (result.state === "granted" || result.state === "prompt") {
+            navigator.clipboard.writeText(output).then(
+                () => {
+                    copy.innerHTML = "Copiado!";
+                    setTimeout(function(){
+                        copy.innerHTML = "Copiar";
+                    }, 800);
+                },
+                () => {
+                  console.error("Unable to copy to clipboard.");
+                },
+            );
+        }
+    });
+}
+
 function updateOutput(text){
     var decodedOutput = document.getElementsByClassName("output-result");
     var empty = document.getElementsByClassName("empty-output");
