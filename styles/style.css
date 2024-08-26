@@ -42,11 +42,17 @@ main{
     height: 100%;
 }
 
+.input-txt:focus {
+    outline: none;
+    border:none;
+}
+
 .input-txt::placeholder{
     color: var(--dark-blue-300);
 }
 
 .output, .input{
+    min-height: 60vh;
     width: 100%;
     padding: 32px;
     border-radius: 32px;

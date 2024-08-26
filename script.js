@@ -5,7 +5,7 @@ function encode() {
     var encodedOutput = document.getElementsByClassName("output-result");
     var empty = document.getElementsByClassName("empty-output");
     encodedOutput[0].innerHTML = output;
-    empty[0].innerHTML = "";
+    empty[0].style.display = "none";
 }
 
 function decode() {
@@ -15,7 +15,7 @@ function decode() {
     var decodedOutput = document.getElementsByClassName("output-result");
     var empty = document.getElementsByClassName("empty-output");
     decodedOutput[0].innerHTML = output;
-    empty[0].innerHTML = "";
+    empty[0].style.display = "none";
 }
 
 function getInput() {
