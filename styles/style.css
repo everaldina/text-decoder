@@ -86,7 +86,7 @@ main{
     color: var(--gray-400);
 }
 
-.empty-output-title{
+.empty-output-highlight{
     font-size: 1.5rem;
     color: var(--gray-500);
     font-weight: 700;

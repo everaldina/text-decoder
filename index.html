@@ -11,11 +11,11 @@
 </head>
 <body>
     <header>
-        <object type="image/svg+xml" data="./assets/icons/aluraHeader.svg"></object>
+        <object type="image/svg+xml" data="./assets/icons/aluraHeader.svg" aria-label="Logo da Alura"></object>
     </header>
     <main>
         <div class="info-container">
-            <object type="image/svg+xml" data="./assets/icons/infoIcon.svg"></object>
+            <object type="image/svg+xml" data="./assets/icons/infoIcon.svg" aria-label="Ícone de Informação"></object>
             <p class="info-txt">Apenas letras minúsculas e sem acento.</p>
         </div>
         <div class="inputs-container">
@@ -24,17 +24,17 @@
             </section>
             <section class="output">
                 <div class="empty-output">
-                    <object type="image/svg+xml" data="./assets/imgs/High quality products 1 1.svg"></object>
+                    <object type="image/svg+xml" data="./assets/imgs/High quality products 1 1.svg" aria-label="Personagem segurando uma lupa em busca de um diamante."></object>
                     <div class="empty-output-txt">
-                        <p class="empty-output-title">Nenhuma mensagem encontrada</p>
+                        <strong class="empty-output-highlight">Nenhuma mensagem encontrada</strong>
                         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                     </div>
                 </div>
                 <div class="output-result">
                     <textarea class="output-txt" disabled ="output" id="output"></textarea>
-                    <div class="copy-container" onclick="copyOutput()">
+                    <div class="copy-container" role="button" aria-label="Copiar texto" onclick="copyOutput()">
                         <p class="copy-txt">Copiar</p>
-                        <object type="image/svg+xml" width="16px" data="./assets/icons/clone-regular-gray-200.svg"></object>
+                        <object type="image/svg+xml" width="16px" data="./assets/icons/clone-regular-gray-200.svg" aria-label="Ícone de copia de texto"></object>
                     </div>
                 </div>
             </section>
