@@ -1,15 +1,26 @@
 function encode() {
     var input = getInput();
-    var output = encoded(input);
-    updateOutput(output);
+
+    if (input == ''){
+        clearOutput();
+        return;
+    }else{
+        var output = encoded(input);
+        updateOutput(output);
+    }
 }
 
 function decode() {
     var input = getInput();
-    var output = decoded(input);
-    updateOutput(output);
-}
 
+    if (input == ''){
+        clearOutput();
+        return;
+    }else{
+        var output = decoded(input);
+        updateOutput(output);
+    }
+}
 
 function updateOutput(text){
     var decodedOutput = document.getElementsByClassName("output-result");
@@ -19,6 +30,13 @@ function updateOutput(text){
     decodedOutput[0].style.display = "block";
     decodedOutput[0].style.height = '100%';
     output.innerHTML = text;
+}
+
+function clearOutput(){
+    var decodedOutput = document.getElementsByClassName("output-result");
+    var empty = document.getElementsByClassName("empty-output");
+    empty[0].style.display = "block"; 
+    decodedOutput[0].style.display = "none";
 }
 
 function getInput() {
